@@ -12,7 +12,7 @@ jobs:
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken 2fsIFrKL3n6wXhQqNqfKpmidKwA_2uTM93do7FsZKGbnVQDLa
+      run: .\ngrok\ngrok.exe authtoken 2fs9Dhp3L54cogojUoiOZjFAuQ0_YKbZabjHKAFb7TfDG4ns
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
@@ -29,7 +29,7 @@ jobs:
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken 2fs9Dhp3L54cogojUoiOZjFAuQ0_YKbZabjHKAFb7TfDG4ns
+      run: .\ngrok\ngrok.exe authtoken 2g0STdUUKW9an0Nm3tkM1aHTvRl_6xBweJrrndrVSFFfj6ZRQ
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
@@ -46,7 +46,7 @@ jobs:
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken 2g0STdUUKW9an0Nm3tkM1aHTvRl_6xBweJrrndrVSFFfj6ZRQ
+      run: .\ngrok\ngrok.exe authtoken 2g0cdb2pgvwRZLodc7Ab3hMGEgl_6ySH3RmgMoE12mQNk3FD4
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
@@ -63,7 +63,7 @@ jobs:
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken 2g0cdb2pgvwRZLodc7Ab3hMGEgl_6ySH3RmgMoE12mQNk3FD4
+      run: .\ngrok\ngrok.exe authtoken 2g0oVlJcZRPSwmf3WP3ARkFGDBB_4TouLnxxys4EmEVG9VGd6
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
@@ -80,7 +80,7 @@ jobs:
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken 2g0oVlJcZRPSwmf3WP3ARkFGDBB_4TouLnxxys4EmEVG9VGd6
+      run: .\ngrok\ngrok.exe authtoken 2g3NNu7D9KcyDccJgnaeS3lHpQe_6zu5HsUBDwZ8AsZDmv4Eo
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"

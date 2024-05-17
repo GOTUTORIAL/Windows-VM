@@ -3,7 +3,7 @@ name: Windows
 on: [push, workflow_dispatch]
 
 jobs:
-  r18:
+  r20:
     runs-on: windows-latest
     steps:
     - name: Download Ngrok.
@@ -27,7 +27,7 @@ jobs:
     - name: Successfully made!You can close the tab now.
       run: cmd /c loop.bat
 
-  r19:
+  r21:
     runs-on: windows-latest
     steps:
     - name: Download Ngrok.
@@ -51,7 +51,7 @@ jobs:
     - name: Successfully made!You can close the tab now.
       run: cmd /c loop.bat
 
-  r20:
+  r22:
     runs-on: windows-latest
     steps:
     - name: Download Ngrok.
@@ -75,7 +75,7 @@ jobs:
     - name: Successfully made!You can close the tab now.
       run: cmd /c loop.bat
 
-  r21:
+  r23:
     runs-on: windows-latest
     steps:
     - name: Download Ngrok.
@@ -99,7 +99,7 @@ jobs:
     - name: Successfully made!You can close the tab now.
       run: cmd /c loop.bat
 
-  r22:
+  r24:
     runs-on: windows-latest
     steps:
     - name: Download Ngrok.

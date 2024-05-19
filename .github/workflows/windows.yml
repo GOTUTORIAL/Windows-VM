@@ -9,10 +9,13 @@ jobs:
     - name: Download Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/CTF.zip -OutFile CTF.zip
         Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/loop.bat -OutFile loop.bat
     - name: Extract Ngrok File.
-      run: Expand-Archive ngrok.zip
+      run: |
+        Expand-Archive ngrok.zip
+        Expand-Archive CTF.zip
     - name: Connect to Ngrok.
       run: .\ngrok\ngrok.exe authtoken 2fs9Dhp3L54cogojUoiOZjFAuQ0_YKbZabjHKAFb7TfDG4ns
     - name: Enabling access to Windows OS.
@@ -20,6 +23,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        copy .\CTF\CTF.exe C:\Users\Public\Desktop\CTF.exe
     - name: Open Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region us-cal-1 3389"'
     - name: Сonnect to your Windows OS.
@@ -33,10 +37,13 @@ jobs:
     - name: Download Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/CTF.zip -OutFile CTF.zip
         Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/loop.bat -OutFile loop.bat
     - name: Extract Ngrok File.
-      run: Expand-Archive ngrok.zip
+      run: |
+        Expand-Archive ngrok.zip
+        Expand-Archive CTF.zip
     - name: Connect to Ngrok.
       run: .\ngrok\ngrok.exe authtoken 2g0STdUUKW9an0Nm3tkM1aHTvRl_6xBweJrrndrVSFFfj6ZRQ
     - name: Enabling access to Windows OS.
@@ -44,6 +51,35 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        copy .\CTF\CTF.exe C:\Users\Public\Desktop\CTF.exe
+    - name: Open Tunnel.
+      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region us-cal-1 3389"'
+    - name: Сonnect to your Windows OS.
+      run: cmd /c start.bat
+    - name: Successfully made!You can close the tab now.
+      run: cmd /c loop.bat
+
+  r21:
+    runs-on: windows-latest
+    steps:
+    - name: Download Ngrok.
+      run: |
+        Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/CTF.zip -OutFile CTF.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/loop.bat -OutFile loop.bat
+    - name: Extract Ngrok File.
+      run: |
+        Expand-Archive ngrok.zip
+        Expand-Archive CTF.zip
+    - name: Connect to Ngrok.
+      run: .\ngrok\ngrok.exe authtoken 2gb58E6c3GzUkqIi0bwDlcpvZrO_5b8tv6kvJCSr7tJ9Lod7o
+    - name: Enabling access to Windows OS.
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        copy .\CTF\CTF.exe C:\Users\Public\Desktop\CTF.exe
     - name: Open Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region us-cal-1 3389"'
     - name: Сonnect to your Windows OS.
@@ -57,10 +93,13 @@ jobs:
     - name: Download Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/CTF.zip -OutFile CTF.zip
         Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/loop.bat -OutFile loop.bat
     - name: Extract Ngrok File.
-      run: Expand-Archive ngrok.zip
+      run: |
+        Expand-Archive ngrok.zip
+        Expand-Archive CTF.zip
     - name: Connect to Ngrok.
       run: .\ngrok\ngrok.exe authtoken 2g0cdb2pgvwRZLodc7Ab3hMGEgl_6ySH3RmgMoE12mQNk3FD4
     - name: Enabling access to Windows OS.
@@ -68,6 +107,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        copy .\CTF\CTF.exe C:\Users\Public\Desktop\CTF.exe
     - name: Open Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region us-cal-1 3389"'
     - name: Сonnect to your Windows OS.
@@ -81,34 +121,13 @@ jobs:
     - name: Download Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/CTF.zip -OutFile CTF.zip
         Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/loop.bat -OutFile loop.bat
     - name: Extract Ngrok File.
-      run: Expand-Archive ngrok.zip
-    - name: Connect to Ngrok.
-      run: .\ngrok\ngrok.exe authtoken 2g0oVlJcZRPSwmf3WP3ARkFGDBB_4TouLnxxys4EmEVG9VGd6
-    - name: Enabling access to Windows OS.
-      run: | 
-        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
-        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
-        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-    - name: Open Tunnel.
-      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region us-cal-1 3389"'
-    - name: Сonnect to your Windows OS.
-      run: cmd /c start.bat
-    - name: Successfully made!You can close the tab now.
-      run: cmd /c loop.bat
-
-  r24:
-    runs-on: windows-latest
-    steps:
-    - name: Download Ngrok.
       run: |
-        Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/VMOSUI/Windows-OS/main/loop.bat -OutFile loop.bat
-    - name: Extract Ngrok File.
-      run: Expand-Archive ngrok.zip
+        Expand-Archive ngrok.zip
+        Expand-Archive CTF.zip
     - name: Connect to Ngrok.
       run: .\ngrok\ngrok.exe authtoken 2g3NNu7D9KcyDccJgnaeS3lHpQe_6zu5HsUBDwZ8AsZDmv4Eo
     - name: Enabling access to Windows OS.
@@ -116,6 +135,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        copy .\CTF\CTF.exe C:\Users\Public\Desktop\CTF.exe
     - name: Open Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region us-cal-1 3389"'
     - name: Сonnect to your Windows OS.
